@@ -29,8 +29,6 @@ def apply_coupons(cart, coupons)
     end
     cart[new_item_name] = new_item_hash
   end
-binding.pry
-	cart = consolidate_cart(cart)
 
 	cart
 end
