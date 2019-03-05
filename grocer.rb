@@ -27,6 +27,8 @@ def apply_coupons(cart, coupons)
         new_item_hash[:count] = 1
       end
     end
+		#check for existing item of same name:
+		binding.pry
     cart[new_item_name] = new_item_hash
   end
 
