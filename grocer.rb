@@ -28,10 +28,12 @@ def apply_coupons(cart, coupons)
       end
     end
 		#check for existing item of same name:
-		binding.pry
-    cart[new_item_name] = new_item_hash
+		if cart.include?(new_item_name)
+			cart[new_item_name][:count] += 1
+		else
+    	cart[new_item_name] = new_item_hash
+		end
   end
-
 	cart
 end
 
